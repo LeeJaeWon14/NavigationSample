@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.jeepchief.navigationsample.fragment.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/failFragment"
+        android:name="com.jeepchief.navigationsample.fragment.FailFragment"
+        android:label="FailFragment" >
+        <action
+            android:id="@+id/action_failFragment_to_mainFragment2"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.jeepchief.navigationsample.fragment.SuccessFragment"
+        android:label="SuccessFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.jeepchief.navigationsample.fragment.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_failFragment"
+            app:destination="@id/failFragment" />
+    </fragment>
+</navigation>
